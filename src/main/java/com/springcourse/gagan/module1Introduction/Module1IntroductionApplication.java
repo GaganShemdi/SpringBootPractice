@@ -13,9 +13,13 @@ public class Module1IntroductionApplication implements CommandLineRunner {
 	@Autowired
 	PaymentService paymentServiceObj;
 
-	@Autowired
-	NotificationService notificationServiceObj;
 
+	final NotificationService notificationServiceObj; // final keyword make it immutable
+
+
+	public Module1IntroductionApplication(NotificationService notificationServiceObj) {
+		this.notificationServiceObj = notificationServiceObj; //construction DI
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(Module1IntroductionApplication.class, args);
