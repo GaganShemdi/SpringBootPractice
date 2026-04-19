@@ -18,7 +18,7 @@ public class Module1IntroductionApplication implements CommandLineRunner {
 	final NotificationService notificationServiceObj; //  final keyword make it immutable
 
 
-	public Module1IntroductionApplication(@Qualifier("emailNotif") NotificationService notificationServiceObj) {
+	public Module1IntroductionApplication(NotificationService notificationServiceObj) {
 		this.notificationServiceObj = notificationServiceObj; //construction DI //preferred
 	}
 
