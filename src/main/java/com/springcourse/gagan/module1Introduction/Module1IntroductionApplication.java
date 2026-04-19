@@ -18,7 +18,7 @@ public class Module1IntroductionApplication implements CommandLineRunner {
 
 
 	public Module1IntroductionApplication(NotificationService notificationServiceObj) {
-		this.notificationServiceObj = notificationServiceObj; //construction DI
+		this.notificationServiceObj = notificationServiceObj; //construction DI //preferred
 	}
 
 	public static void main(String[] args) {
