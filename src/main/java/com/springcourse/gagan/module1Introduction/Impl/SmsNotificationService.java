@@ -1,11 +1,13 @@
 package com.springcourse.gagan.module1Introduction.Impl;
 
 import com.springcourse.gagan.module1Introduction.NotificationService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Primary
+
 @Component
+@Qualifier("smsNotif")
 public class SmsNotificationService implements NotificationService {
     @Override
     public void send(String message){
