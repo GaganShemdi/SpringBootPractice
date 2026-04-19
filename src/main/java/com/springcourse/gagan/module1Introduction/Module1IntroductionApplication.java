@@ -1,5 +1,7 @@
 package com.springcourse.gagan.module1Introduction;
 
+import com.springcourse.gagan.module1Introduction.Impl.EmailNotificationService;
+import com.springcourse.gagan.module1Introduction.Impl.SmsNotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,13 +13,16 @@ public class Module1IntroductionApplication implements CommandLineRunner {
 	@Autowired
 	PaymentService paymentServiceObj;
 
+	@Autowired
+	NotificationService notificationServiceObj;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(Module1IntroductionApplication.class, args);
 	}
 		@Override
 		public void run(String... args) throws Exception{
-			paymentServiceObj.pay();
+			notificationServiceObj.send("hello");
 		}
 
 	}
